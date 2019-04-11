@@ -2,14 +2,15 @@
     margin: 10px auto;
 }
 .attack-btns {
-    border: 1px solid #666;
+    border: 3px solid #666;
     border-radius: 5px;
+    font-size: 4rem;
+    margin: 10px;
     height: 100px;
     width: 100px;
-    margin: 5px 10px;
 }
 #chatbox {
-    border: 1px solid #666;
+    border: 3px solid #666;
     border-radius: 5px;
     height: 250px;
     width: 100%;
