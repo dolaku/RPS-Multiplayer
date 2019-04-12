@@ -18,31 +18,27 @@
         <div class="row">
             <div class="col-lg-8 text-center d-flex" id="arena">
                 <div class="align-items-center" id="player1">
-                    <h4>Waiting for Player 1</h4>
+                    <div id="p1-name">Waiting for Player 1</div>
                     <div class="player-info">
                         <input type="text" class="my-3 mx-1 text-center player-name-input" id="p1-info" placeholder="Your Name">
                         <i class="far fa-caret-square-right name-submit" id="p1-name-submit"></i>
                     </div>
-                    <ul class="d-flex flex-wrap justify-content-center attack-wrapper">
+                    <ul class="attack-wrapper d-none">
                         <li class="attack-btns rock" data-choice="choice-rock"><i class="far fa-hand-rock"></i></li>
                         <li class="attack-btns paper" data-choice="choice-paper"><i class="far fa-hand-paper"></i></li>
                         <li class="attack-btns scissors" data-choice="choice-scissors"><i class="far fa-hand-scissors"></i></li>
                     </ul>
                 </div> <!-- End P1 -->
 
-                <div class="m-2 align-items-center d-flex flex-direction-column justify-content-center" id="show-hand">
-                    <h4>
-                        Display RPS Here
-                    </h4>
-                </div>
+                <div class="m-2 align-items-center d-flex flex-direction-column justify-content-center" id="show-hand"></div>
 
                 <div class="align-items-center" id="player2">
-                    <h4>Waiting for Player 2</h4>
+                    <div id="p2-name">Waiting for Player 2</div>
                     <div class="player-info">
                         <input type="text" class="my-3 mx-1 text-center player-name-input" id="p2-info" placeholder="Your Name">
                         <i class="far fa-caret-square-right name-submit" id="p2-name-submit"></i>
                     </div>
-                    <ul class="d-flex flex-wrap justify-content-center attack-wrapper">
+                    <ul class="attack-wrapper d-none">
                         <li class="attack-btns rock" data-choice="choice-rock"><i class="far fa-hand-rock"></i></li>
                         <li class="attack-btns paper" data-choice="choice-paper"><i class="far fa-hand-paper"></i></li>
                         <li class="attack-btns scissors" data-choice="choice-scissors"><i class="far fa-hand-scissors"></i></li>
@@ -54,6 +50,12 @@
                 <div class="my-3 p-2 d-flex flex-column-reverse" id="chatbox"></div>
                 <textarea class="p-2" name="chat" id="textbox" placeholder="Send a message . . . "></textarea>
                 <button class="mt-3 btn btn-outline-dark" id="chat-submit" type="button">Send</button>
+            </div>
+        </div> <!-- End row -->
+
+        <div class="row">
+            <div class="col-12">
+                <div class="new-game"></div>
             </div>
         </div>
     </div>

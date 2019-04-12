@@ -1,8 +1,8 @@
 /*--------------------------------
         Global Variables
 --------------------------------*/
-var p1Present = false;
-var p2Present = false;
+var p1Present;
+var p2Present;
 var p1Name;
 var p2Name;
 var p1Choice;
@@ -23,46 +23,14 @@ firebase.initializeApp(config);
 
 var database = firebase.database();
 
-
-/*
-// (CRITICAL - BLOCK) --------------------------- //
-// connectionsRef references a specific location in our database.
-// All of our connections will be stored in this directory.
-var connectionsRef = database.ref("/connections");
-
-// '.info/connected' is a special location provided by Firebase that is updated every time the client's connection state changes.
-// '.info/connected' is a boolean value, true if the client is connected and false if they are not.
-var connectedRef = database.ref(".info/connected");
-
-// When the client's connection state changes...
-connectedRef.on("value", function (snap) {
-    console.log(snap);
-    // If they are connected..
-    if (snap.val()) {
-
-        // Add user to the connections list.
-        var con = connectionsRef.push(true);
-
-        // Remove user from the connection list when they disconnect.
-        con.onDisconnect().remove();
-    }
-});
-
-// When first loaded or when the connections list changes...
-connectionsRef.on("value", function (snapshot) {
-
-    // Display the viewer count in the html.
-    // The number of online users is the number of children in the connections list.
-    $("#watchers").text(snapshot.numChildren());
-});
-
-// (CRITICAL - BLOCK) --------------------------- //
-*/
+// Clears player info
+database.ref().child('/players/').remove();
 
 // At the page load and value changes, get a snapshot of the local data.
 // Create Firebase event for adding a train to the database
-database.ref().on("child_added", function (snapshot) {
+database.ref('/players/').on("value", function (snapshot) {
     var data = snapshot.val();
+    console.log(data);
 
 
 
@@ -91,8 +59,9 @@ $('#p1-name-submit').on('click', function () {
     // Clear & hide input field
     $('#p1-info').val('');
     $('#player1').find('.player-info').addClass('d-none');
-    // Update DOM for p1 name
-    $('#player1').find('h4').text(p1Present.name);
+    // Show choices
+    $('#player1').find('ul')
+        .removeClass('d-none');
 });
 
 // Add player2
@@ -113,9 +82,11 @@ $('#p2-name-submit').on('click', function () {
 
     // Clear & hide input field
     $('#p2-info').val('');
-    $('#player2').find('.player-info').addClass('d-none');
-    // Update DOM for p1 name
-    $('#player2').find('h4').text(p2Present.name);
+    $('#player2').find('.player-info')
+        .addClass('d-none');
+    // Show choices
+    $('#player2').find('ul')
+        .removeClass('d-none');
 });
 
 // Chat submit && displays to chatbox
@@ -151,3 +122,5 @@ function updateChat() {
 
     $('#textbox').val('');
 }
+
+//

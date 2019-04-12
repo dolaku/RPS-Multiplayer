@@ -1,4 +1,5 @@
 .player-info {
+    min-width: 225px;
     position: relative;
 }
 .player-name-input {
@@ -12,10 +13,13 @@
     cursor: pointer;
     font-size: 2rem;
     position: absolute;
-    top: 22px;
+    top: 24px;
     right: 14px;
 }
 .attack-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     margin: 10px auto;
 }
 .attack-btns {
@@ -25,6 +29,16 @@
     margin: 10px;
     height: 100px;
     width: 100px;
+}
+#p1-name {
+    color: lightskyblue;
+    font-size: 1.25rem;
+    font-weight: 800;
+}
+#p2-name {
+    color: mediumorchid;
+    font-size: 1.25rem;
+    font-weight: 800;
 }
 #player1 .attack-btns {
     color: lightskyblue;
