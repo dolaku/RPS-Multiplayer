@@ -12,11 +12,23 @@
 #chatbox {
     border: 3px solid #666;
     border-radius: 5px;
-    height: 250px;
+    overflow: auto;
+    height: 200px;
     width: 100%;
 }
 #textbox {
     border: 1px solid #666;
     height: 80px;
     width: 100%;
+}
+#chat-submit {
+    float: right;
+}
+
+@media only screen and (max-width: 500px) {
+    .attack-btns {
+        font-size: 2.5rem;
+        height: 65px;
+        width: 65px;
+    }
 }

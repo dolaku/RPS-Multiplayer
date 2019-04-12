@@ -16,7 +16,7 @@
 
     <div class="container my-4">
         <div class="row">
-            <div class="col-md-8 text-center d-flex" id="arena">
+            <div class="col-lg-8 text-center d-flex" id="arena">
                 <div class="align-items-center" id="player1">
                     <h5>Player 1</h5>
                     <ul class="d-flex flex-wrap justify-content-center attack-wrapper">
@@ -24,7 +24,6 @@
                         <li class="attack-btns paper"><i class="far fa-hand-paper"></i></li>
                         <li class="attack-btns scissors"><i class="far fa-hand-scissors"></i></li>
                     </ul>
-                    <button id="p1-submit" type="button" class="m-3 btn btn-dark btn-lg">Shoot!</button>
                 </div> <!-- End P1 -->
 
                 <div class="m-5 align-items-center d-flex flex-direction-column justify-content-center" id="show-hand">
@@ -40,14 +39,13 @@
                         <li class="attack-btns paper"><i class="far fa-hand-paper"></i></li>
                         <li class="attack-btns scissors"><i class="far fa-hand-scissors"></i></li>
                     </ul>
-                    <button id="p2-submit" type="button" class="m-3 btn btn-dark btn-lg">Shoot!</button>
                 </div> <!-- End P2 -->
             </div> <!-- End arena-->
 
-            <div class="col-md-4 textarea">
-                <div class="my-3" id="chatbox"></div>
-                <textarea name="chat" id="textbox" placeholder="Send a message . . . "></textarea>
-                <button id="p2-submit" type="button" class="m-3 btn btn-outline-dark">Send</button>
+            <div class="col-lg-4 textarea">
+                <div class="my-3 p-2 d-flex flex-column-reverse" id="chatbox"></div>
+                <textarea class="p-2" name="chat" id="textbox" placeholder="Send a message . . . "></textarea>
+                <button class="mt-3 btn btn-outline-dark" id="chat-submit" type="button">Send</button>
             </div>
         </div>
     </div>

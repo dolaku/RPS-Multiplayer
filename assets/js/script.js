@@ -23,10 +23,31 @@ $(document).ready(function () {
 
     });
 
-    // Listener on form submit
-    $('#form-submit').on('click', function (event) {
-        // stops page from refreshing
-        event.preventDefault();
-
+    // Listener on chat submit && displays to chatbox
+    $('#chat-submit').on('click', function (e) {
+        // Prevent page from refreshing
+        e.preventDefault();
+        
+        updateChat();
     });
+
+    // Listener - enter button
+    $(document).on('keypress', function (e) {
+        if (e.which == 13) {
+            // Prevent page from refreshing
+            e.preventDefault();
+
+            updateChat();
+        }
+    });
+    
+    function updateChat() {
+        var chatText = $('#textbox').val().trim();
+
+        $('#chatbox').prepend(`
+            <div>${chatText}</div>
+        `)
+
+        $('#textbox').val('');
+    }
 });
