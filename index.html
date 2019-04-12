@@ -18,26 +18,34 @@
         <div class="row">
             <div class="col-lg-8 text-center d-flex" id="arena">
                 <div class="align-items-center" id="player1">
-                    <h5>Player 1</h5>
+                    <h4>Waiting for Player 1</h4>
+                    <div class="player-info">
+                        <input type="text" class="my-3 mx-1 text-center player-name-input" id="p1-info" placeholder="Your Name">
+                        <i class="far fa-caret-square-right name-submit" id="p1-name-submit"></i>
+                    </div>
                     <ul class="d-flex flex-wrap justify-content-center attack-wrapper">
-                        <li class="attack-btns rock"><i class="far fa-hand-rock"></i></li>
-                        <li class="attack-btns paper"><i class="far fa-hand-paper"></i></li>
-                        <li class="attack-btns scissors"><i class="far fa-hand-scissors"></i></li>
+                        <li class="attack-btns rock" data-choice="choice-rock"><i class="far fa-hand-rock"></i></li>
+                        <li class="attack-btns paper" data-choice="choice-paper"><i class="far fa-hand-paper"></i></li>
+                        <li class="attack-btns scissors" data-choice="choice-scissors"><i class="far fa-hand-scissors"></i></li>
                     </ul>
                 </div> <!-- End P1 -->
 
-                <div class="m-5 align-items-center d-flex flex-direction-column justify-content-center" id="show-hand">
-                    <h3>
+                <div class="m-2 align-items-center d-flex flex-direction-column justify-content-center" id="show-hand">
+                    <h4>
                         Display RPS Here
-                    </h3>
+                    </h4>
                 </div>
 
                 <div class="align-items-center" id="player2">
-                    <h5>Player 2</h5>
+                    <h4>Waiting for Player 2</h4>
+                    <div class="player-info">
+                        <input type="text" class="my-3 mx-1 text-center player-name-input" id="p2-info" placeholder="Your Name">
+                        <i class="far fa-caret-square-right name-submit" id="p2-name-submit"></i>
+                    </div>
                     <ul class="d-flex flex-wrap justify-content-center attack-wrapper">
-                        <li class="attack-btns rock"><i class="far fa-hand-rock"></i></li>
-                        <li class="attack-btns paper"><i class="far fa-hand-paper"></i></li>
-                        <li class="attack-btns scissors"><i class="far fa-hand-scissors"></i></li>
+                        <li class="attack-btns rock" data-choice="choice-rock"><i class="far fa-hand-rock"></i></li>
+                        <li class="attack-btns paper" data-choice="choice-paper"><i class="far fa-hand-paper"></i></li>
+                        <li class="attack-btns scissors" data-choice="choice-scissors"><i class="far fa-hand-scissors"></i></li>
                     </ul>
                 </div> <!-- End P2 -->
             </div> <!-- End arena-->

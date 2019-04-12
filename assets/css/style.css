@@ -1,3 +1,20 @@
+.player-info {
+    position: relative;
+}
+.player-name-input {
+    border: 3px solid #666;
+    border-radius: 5px;
+    padding-right: 38px;
+    height: 45px;
+    width: 95%
+}
+.name-submit {
+    cursor: pointer;
+    font-size: 2rem;
+    position: absolute;
+    top: 22px;
+    right: 14px;
+}
 .attack-wrapper {
     margin: 10px auto;
 }
@@ -9,11 +26,26 @@
     height: 100px;
     width: 100px;
 }
+#player1 .attack-btns {
+    color: lightskyblue;
+}
+#player2 .attack-btns {
+    color: mediumorchid;
+}
+.scissors {
+    transform: scaleX(-1);
+}
+#show-hand {
+    flex-basis: 45%;
+}
+
+/* Chat Area */
 #chatbox {
     border: 3px solid #666;
     border-radius: 5px;
     overflow: auto;
-    height: 200px;
+    max-height: 200px;
+    min-height: 100px;
     width: 100%;
 }
 #textbox {
